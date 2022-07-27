@@ -16,8 +16,8 @@ jobs:
           key: ${{ secrets.main mac }}
           port: 20221
           script: |
-          cd /home/clove/notclove.ru/
-          git pull git@github.com:NotClove/nc-content.git content/
-          sudo hugo -D
+            cd /home/clove/notclove.ru/
+            git pull git@github.com:NotClove/nc-content.git content/
+            sudo hugo -D
 
 
