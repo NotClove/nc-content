@@ -11,14 +11,14 @@ jobs:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: ***REMOVED***
-          username: clove
+          host: ${{ secrets.HOSTIP }}
+          username: ${{ secrets.HOSTUSER }}
           key: ${{ secrets.MAINMAC }}
-          port: 20221
+          port: ${{ secrets.HOSTPORT}}
           script: |
-            cd /home/clove/notclove.ru/content
+            cd ~/notclove.ru/content
             sudo git pull https://github.com/NotClove/nc-content.git
-            cd /home/clove/notclove.ru
+            cd ~/notclove.ru
             sudo hugo -D
 
 
