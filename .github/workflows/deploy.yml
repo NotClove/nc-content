@@ -1,0 +1,23 @@
+name: deploy prod
+on:
+  push:
+    branches: [main]
+
+jobs:
+  one:
+    name: deploy prod action
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ***REMOVED***
+          username: clove
+          key: ${{ secrets.main mac }}
+          port: 20221
+          script: |
+          cd /home/clove/notclove.ru/
+          git pull git@github.com:NotClove/nc-content.git content/
+          sudo hugo -D
+
+
