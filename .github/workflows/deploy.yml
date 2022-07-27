@@ -13,7 +13,7 @@ jobs:
         with:
           host: ***REMOVED***
           username: clove
-          key: ${{ secrets.mainmac }}
+          key: ${{ secrets.MAINMAC }}
           port: 20221
           script: |
             cd /home/clove/notclove.ru/
