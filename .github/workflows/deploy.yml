@@ -16,8 +16,9 @@ jobs:
           key: ${{ secrets.MAINMAC }}
           port: 20221
           script: |
-            cd /home/clove/notclove.ru/
-            sudo git pull https://github.com/NotClove/nc-content.git content
+            cd /home/clove/notclove.ru/content
+            sudo git pull https://github.com/NotClove/nc-content.git
+            cd /home/clove/notclove.ru
             sudo hugo -D
 
 
